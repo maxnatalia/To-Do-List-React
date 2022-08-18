@@ -5,9 +5,9 @@ This project was bootstrapped with Create React App.
 # 📑 Table of contents:
 
 1. [📌Description](#description)
-2. [👁‍🗨Demo](#👁‍🗨demo)
-3. [🛠Technologies](#🛠technologies)
-4. [📌Available Scripts](#📌available-scripts)
+2. [👁‍🗨Demo](#demo)
+3. [🛠Technologies](#technologies)
+4. [📌Available Scripts](#available-scripts)
 
 ## 📌Description:
 
