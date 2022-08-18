@@ -1,16 +1,34 @@
 # 📂To Do List - Lista zadań
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## 📌Description:
 This is a simple project - To Do List.
 
+This project was bootstrapped with Create React App.
+# 📑Table of contents:
+
+1. [Description](#📌description)
+2. [Demo](#👁‍🗨demo)
+3. [Technologies](#🛠technologies)
+4. [Available Scripts](#📌available-scripts)
+## 📌Description:
+
+This simple project contains adding a new task, ticking a task as done✅ and removing a task.
+
+The project has been upgraded with new interesting features. Now you can also hiding completed tasks and quickly unchecking all already completed tasks.
+
 ## 👁‍🗨Demo:
-https://maxnatalia.github.io/ToDoListReact/
+[Add new task](https://maxnatalia.github.io/ToDoListReact/)
 
-![lista-zadan-demo.jpg](https://i.postimg.cc/yNvKD2fH/lista-zadan-demo.jpg)
+![lista-zadan.jpg](https://i.postimg.cc/8kfggsC2/lista-zadan.jpg)
 
-## Available Scripts
+## 🛠Technologies:
+
+- [x] HTML
+- [x] CSS (grid, media queries)
+- [x] JavaScript
+- [x] BEM convention
+- [x] ES6+features
+- [x] Create React App
+- [x] Markdown
+## 📌Available Scripts
 
 In the project directory, you can run:
 
@@ -30,6 +48,11 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run eject`
+Note: this is a one-way operation. Once you eject, you can't go back!
 
+If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
