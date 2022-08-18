@@ -4,22 +4,23 @@ This is a simple project - To Do List.
 This project was bootstrapped with Create React App.
 # 📑 Table of contents:
 
-1. [Description](#📌1-description)
-2. [Demo](#👁‍🗨2-demo)
-3. [Technologies](#🛠3-technologies)
-4. [Available Scripts](#📌4-available-scripts)
-## 📌1. Description:
+1. [📌Description](#description)
+2. [👁‍🗨Demo](#👁‍🗨demo)
+3. [🛠Technologies](#🛠technologies)
+4. [📌Available Scripts](#📌available-scripts)
+
+## 📌Description:
 
 This simple project contains adding a new task, ticking a task as done✅ and removing a task.
 
 The project has been upgraded with new interesting features. Now you can also hiding completed tasks and quickly unchecking all already completed tasks.
 
-## 👁‍🗨2. Demo:
+## 👁‍🗨Demo:
 [Add new task](https://maxnatalia.github.io/ToDoListReact/)
 
 ![lista-zadan.jpg](https://i.postimg.cc/8kfggsC2/lista-zadan.jpg)
 
-## 🛠3. Technologies:
+## 🛠Technologies:
 
 - [x] HTML
 - [x] CSS (grid, media queries)
@@ -28,7 +29,7 @@ The project has been upgraded with new interesting features. Now you can also hi
 - [x] ES6+features
 - [x] Create React App
 - [x] Markdown
-## 📌4. Available Scripts
+## 📌Available Scripts
 
 In the project directory, you can run:
 
