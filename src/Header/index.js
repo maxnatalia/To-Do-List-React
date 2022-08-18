@@ -1,5 +1,7 @@
-const Header = ({title}) => (
-    <header className="container__header">
+import "./style.css";
+
+const Header = ({ title }) => (
+    <header className="header">
         <h1>{title}</h1>
     </header>
 );
