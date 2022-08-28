@@ -4,17 +4,24 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Main from "./Main";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
+const getInitialTasks = () => {
+    const tasksFromLocalStorage = localStorage.getItem("tasks");
+
+    return (
+        JSON.parse(tasksFromLocalStorage)
+        || []
+    );
+};
 
 function App() {
-    const [tasks, setTasks] = useState(
-        [
-            { id: 1, content: "pranie", done: false },
-            { id: 2, content: "odkurzyć", done: true },
-        ]
-    );
-
     const [hideDone, setHideDone] = useState(false);
+    const [tasks, setTasks] = useState(getInitialTasks);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     const toggleHideDone = () => {
         setHideDone(hideDone => !hideDone);
@@ -62,5 +69,6 @@ function App() {
             />
         </Main>
     );
-}
+};
+
 export default App;
