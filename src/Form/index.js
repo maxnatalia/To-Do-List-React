@@ -3,7 +3,11 @@ import React, { useState, useRef } from "react";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    
     const inputRef = useRef(null);
+    const focusInput = () => {
+        inputRef.current.focus();
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -15,8 +19,8 @@ const Form = ({ addNewTask }) => {
         }
         addNewTask(contentTrimmed);
         setNewTaskContent("");
-        inputRef.current.focus();
-    }
+        focusInput();
+    };
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <input
