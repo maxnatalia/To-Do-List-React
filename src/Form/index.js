@@ -1,8 +1,10 @@
 import "./style.css";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null);
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
@@ -13,10 +15,12 @@ const Form = ({ addNewTask }) => {
         }
         addNewTask(contentTrimmed);
         setNewTaskContent("");
+        inputRef.current.focus();
     }
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <input
+                ref={inputRef}
                 value={newTaskContent}
                 required
                 autofocus
