@@ -6,7 +6,7 @@ export const Container = styled.div`
     font-size: 16px;
     padding: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         display: grid;
         grid-template-rows: 1fr;
     }
@@ -14,20 +14,20 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     background-color: transparent;
-    color: hsl(180, 100%, 25%);
+    color: ${({ theme }) => theme.color.teal};
     border: none;
     margin: 0;
     cursor: pointer;
 
     &:hover {
-        color: hsl(180, 100%, 35%);
+        filter: brightness(120%);
     }
 
     &:active {
-        color: hsl(180, 100%, 45%);
+        filter: brightness(130%);
     }
 
     &:disabled {
-        color: #aaa;
+        color: ${({ theme }) => theme.color.aluminium};
     }
 `;

@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const MainSection = styled.section`
-    background-color: white;
-    box-shadow: 1px 1px 2px rgb(174, 169, 169);
+    background-color: ${({ theme }) => theme.color.whisper};
+    box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
     border-radius: 5px;
 `;
 
@@ -14,9 +14,9 @@ export const Header = styled.header`
     padding: 0;
     margin-bottom: 0;
     margin-top: 10px;
-    border-bottom: 3px solid #eee;
+    border-bottom: 3px solid ${({ theme }) => theme.color.silver};
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         grid-template-columns: 1fr;
     }
 `;

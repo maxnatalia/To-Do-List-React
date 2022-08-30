@@ -5,13 +5,13 @@ export const List = styled.ul`
     word-break: break-word;
     padding: 40px;
     margin: 0;
-    background-color: white;
-    box-shadow: 1px 1px 2px rgb(174, 169, 169);
+    background-color: ${({ theme }) => theme.color.whisper};
+    box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
     border-radius: 5px;
 `;
 
 export const Item = styled.li`
-    border-bottom: 3px solid #eee;
+    border-bottom: 2px solid ${({ theme }) => theme.color.silver};
     display: grid;
     grid-template-columns: auto 1fr auto;
     padding: 10px;
@@ -33,33 +33,33 @@ export const Button = styled.button`
     border: none;
     width: 30px;
     height: 30px;
-    color: white;
+    color: ${({ theme }) => theme.color.whisper};
     cursor: pointer;
     transition: 1s;
 
     ${({ toggleDone }) => toggleDone && css`
-        background-color: hwb(120 13% 45%);
+        background-color: ${({ theme }) => theme.color.eucalyptus};
 
         &:hover {
-            background-color: hwb(120 13% 35%);
+            background-color: ${({ theme }) => theme.color.jade};
             transition: 1s; 
         }
 
         &:active {
-            background-color: hwb(120 13% 25%);
+            background-color: ${({ theme }) => theme.color.jungle};
         }
     `}
 
     ${({ remove }) => remove && css`
-        background-color: hsl(348, 83%, 47%);
+        background-color: ${({ theme }) => theme.color.crimson};
 
         &:hover {
-            background-color: hsl(348, 83%, 57%);
+            background-color: ${({ theme }) => theme.color.mandy};
             transition: 1s; 
         }
 
         &:active {
-            background-color: hsl(348, 83%, 67%);
+            background-color: ${({ theme }) => theme.color.blossom};
         }
     `}
 `;
