@@ -26,6 +26,7 @@ const Form = ({ addNewTask }) => {
             <Input
                 ref={inputRef}
                 value={newTaskContent}
+                autoFocus
                 required
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 name="input"

@@ -3,7 +3,7 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
-import Main from "./Main";
+import { Main } from "./Main";
 import { useState } from "react";
 import { useTasks } from "./useTasks";
 

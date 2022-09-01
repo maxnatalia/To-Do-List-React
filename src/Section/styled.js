@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainSection = styled.section`
+export const StyledSection = styled.section`
     background-color: ${({ theme }) => theme.color.whisper};
     box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
     border-radius: 5px;
