@@ -28,6 +28,8 @@ export const Button = styled.button`
     }
 
     &:disabled {
-        color: ${({ theme }) => theme.color.aluminium};
+        color: ${({ theme }) => theme.color.silver};
+        cursor: default;
+        filter: none;
     }
 `;
