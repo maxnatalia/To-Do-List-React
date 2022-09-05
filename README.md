@@ -29,6 +29,8 @@ The project has been upgraded with new interesting features. Now you can also hi
 - [x] Create React App
 - [x] Markdown
 - [x] Styled-Components
+- [x] React Hooks
+- [x] React-Redux
 ## 📌Available Scripts
 
 In the project directory, you can run:
