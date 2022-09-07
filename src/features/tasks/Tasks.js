@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import { Main } from "./Main";
+import ExtraButton from "./ExtraButton";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Header title="Lista zadań" />
             <Section
                 title="Dodaj nowe zadanie"
+                extraContent={<ExtraButton />}
                 body={<Form />}
             />
             <Section
