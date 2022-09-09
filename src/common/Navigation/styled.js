@@ -25,5 +25,4 @@ export const Nav = styled.nav`
     width: 100%;
     padding: 10px;
     position: fixed;
-    overflow: auto;
 `;
