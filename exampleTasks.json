@@ -1,0 +1,17 @@
+[
+    {
+        "content": "Zobacz szczegóły zadania klikając w jego treść",
+        "done": false,
+        "id": "YREF8absrQmfZs6suGYwr"
+    },
+    {
+        "content": "Oznacz zadanie jako ukończone klikając w zielony przycisk",
+        "done": false,
+        "id": "zJ8zl-rZ6VTHt9uggBFqD"
+    },
+    {
+        "content": "Usuń zadanie z listy zadań klikając w czerwony przycisk",
+        "done": false,
+        "id": "xOs5KGHRWBNjUw9rzyK5O"
+    }
+]
