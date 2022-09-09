@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export const FormContainer = styled.form`
-    padding: 20px;
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-    box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
-    border-radius: 5px;
     
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         grid-template-columns: 1fr;

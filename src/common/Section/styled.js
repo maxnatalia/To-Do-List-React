@@ -4,6 +4,11 @@ export const StyledSection = styled.section`
     background-color: ${({ theme }) => theme.color.whisper};
     box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
     border-radius: 5px;
+    padding-left: 10px;
+    margin: 10px auto;
+`;
+export const Wrapper = styled.div`
+    padding: 20px;
 `;
 
 export const Header = styled.header`
