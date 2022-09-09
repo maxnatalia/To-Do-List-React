@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Container, Button } from "../Buttons/styled";
-import { fetchExampleTasks, selectIsLoading } from "../../tasks/tasksSlice";
+import { fetchExampleTasks, selectIsLoading } from "../../tasksSlice";
 
 const ExtraButton = () => {
 

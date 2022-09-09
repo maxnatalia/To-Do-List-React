@@ -13,13 +13,6 @@ export const FormContainer = styled.form`
     }
 `;
 
-export const Input = styled.input`
-    padding: 10px;
-    border: 2px solid ${({ theme }) => theme.color.silver};
-    background-color: ${({ theme }) => theme.color.whisper};
-    border-radius: 5px;
-`;
-
 export const Button = styled.button`
     border: none;
     border-radius: 5px;
