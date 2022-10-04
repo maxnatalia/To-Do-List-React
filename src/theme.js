@@ -12,3 +12,9 @@ export const theme = {
     },
 };
 
+export const darkTheme = {
+    ...theme,
+    color: {
+        primaryColor: "#3A404B",
+    },
+};
