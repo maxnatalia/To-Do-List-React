@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-    background-color: ${({ theme }) => theme.color.whisper};
-    box-shadow: 1px 1px 2px ${({ theme }) => theme.color.silver};
+    background-color: ${({ theme }) => theme.color.backgroundColorsMain};
+    box-shadow: 1px 1px 2px ${({ theme }) => theme.color.border};
     border-radius: 5px;
 `;
 export const Wrapper = styled.div`
@@ -15,7 +15,7 @@ export const Header = styled.header`
     align-items: center;
     font-size: 22px;
     margin-top: 10px;
-    border-bottom: 2px solid ${({ theme }) => theme.color.silver};
+    border-bottom: 2px solid ${({ theme }) => theme.color.border};
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px) {
         grid-template-columns: 1fr;

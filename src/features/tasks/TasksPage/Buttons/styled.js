@@ -14,7 +14,7 @@ export const Container = styled.div`
 
 export const Button = styled.button`
     background-color: transparent;
-    color: ${({ theme }) => theme.color.teal};
+    color: ${({ theme }) => theme.color.primaryColor};
     border: none;
     margin: 0;
     cursor: pointer;
@@ -28,7 +28,7 @@ export const Button = styled.button`
     }
 
     &:disabled {
-        color: ${({ theme }) => theme.color.silver};
+        color: ${({ theme }) => theme.color.border};
         cursor: default;
         filter: none;
     }

@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
     font-family: 'Montserrat', sans-serif;
-    background-color: ${({ theme }) => theme.color.mercury};
+    background-color: ${({ theme }) => theme.color.backgroundBody};
     line-height: 1.5;
     word-break: break-word;
     }

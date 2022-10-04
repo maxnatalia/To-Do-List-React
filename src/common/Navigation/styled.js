@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const StyledNavLink = styled(NavLink)`
-    color: ${({ theme }) => theme.color.whisper};
+    color: ${({ theme }) => theme.color.backgroundColorsMain};
     text-decoration: none;
     padding: 10px;
 
@@ -12,13 +12,13 @@ export const StyledNavLink = styled(NavLink)`
 
     &.active {
         font-weight: 700;
-        color: ${({ theme }) => theme.color.whisper};
+        color: ${({ theme }) => theme.color.backgroundColorsMain};
         text-decoration: none;
     }
 `;
 
 export const Nav = styled.nav`
-    background-color: ${({ theme }) => theme.color.teal};
+    background-color: ${({ theme }) => theme.color.primaryColor};
     display: grid;
     grid-template-columns: max-content max-content;
     justify-content: center;

@@ -13,18 +13,18 @@ export const FormContainer = styled.form`
 export const Button = styled.button`
     border: none;
     border-radius: 5px;
-    background-color: ${({ theme }) => theme.color.teal};
-    color: ${({ theme }) => theme.color.whisper};
+    background-color: ${({ theme }) => theme.color.primaryColor};
+    color: ${({ theme }) => theme.color.backgroundColorsMain};
     padding: 10px;
     cursor: pointer;
     transition: 1s;
 
     &:hover {
-        background-color: ${({ theme }) => theme.color.gossamer};
+        filter: brightness(130%);
         transform: scale(1.2);
     }
 
     &:active {
-        background-color: ${({ theme }) => theme.color.java};
+        filter: brightness(140%);
     }
 `;
