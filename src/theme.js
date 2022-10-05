@@ -6,6 +6,7 @@ export const theme = {
         backgroundBody: "#E3E3E3",
         backgroundColorsMain: "#F7F5FA", 
         border: "#C0C0C0",
+        text: "#3F434B",
     },
     breakpoint: {
         mobile: 767,
@@ -15,6 +16,12 @@ export const theme = {
 export const darkTheme = {
     ...theme,
     color: {
-        primaryColor: "#3A404B",
+        primaryColor: "#BBCC5C",
+        removeButton: "#DC143C",
+        toggleButton: "#278A5B",
+        backgroundBody: "#30322A",
+        backgroundColorsMain: "#43453B",
+        border: "#6D7583",
+        text: "#E3E3E3",
     },
 };
