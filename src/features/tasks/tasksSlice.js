@@ -28,6 +28,9 @@ const tasksSlice = createSlice({
                 task.done = true;
             }
         },
+        removeAllTasks: (state) => {
+            state.tasks = [];
+        },
         fetchExampleTasks: state => {
             state.loading = true;
         },
@@ -46,7 +49,7 @@ const tasksSlice = createSlice({
 
 const selectTaskState = state => state.tasks;
 
-export const { addTask, toggleHideDone, toggleTaskDone, removeTask, setAllDone, fetchExampleTasks, fetchExampleTasksSuccess, fetchExampleTasksError, setTasks } = tasksSlice.actions;
+export const { addTask, toggleHideDone, toggleTaskDone, removeTask, setAllDone, removeAllTasks, fetchExampleTasks, fetchExampleTasksSuccess, fetchExampleTasksError, setTasks } = tasksSlice.actions;
 export const selectHideDone = state => selectTaskState(state).hideDone;
 export const selectTasks = state => selectTaskState(state).tasks;
 export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }) => done);
