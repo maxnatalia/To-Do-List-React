@@ -46,7 +46,9 @@ export const Button = styled.button`
     border: none;
     width: 30px;
     height: 30px;
-    color: ${({ theme }) => theme.color.backgroundColorsMain};
+    color: ${({ theme }) => theme.color.text};
+    font-weight: 700;
+    font-size: 15px;
     cursor: pointer;
     transition: 1s;
 
