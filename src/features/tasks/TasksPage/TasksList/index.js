@@ -10,6 +10,13 @@ const TasksList = () => {
     const hideDone = useSelector(selectHideDone);
 
     const dispatch = useDispatch();
+
+    if (tasks.length <= 0) {
+        return (
+            <p>📌Nie masz aktualnie żadnych zadań na liście</p>
+        );
+    };
+
     return (
         <List>
             {tasks.map(task => (
