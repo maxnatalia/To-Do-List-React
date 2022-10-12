@@ -27,6 +27,21 @@ export const Content = styled.span`
     `}
 `;
 
+export const EditableContent = styled.div`
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+    align-items: center;
+`;
+
+export const ContentInput = styled.input`
+    width: 100%;
+    padding: 5px;
+    border: 1px solid ${({ theme }) => theme.color.border};
+    background-color: ${({ theme }) => theme.color.backgroundColorsMain};
+    color: ${({ theme }) => theme.color.text};
+`;
+
 export const StyledLinkTask = styled(Link)`
     text-decoration: none;
     color: ${({ theme }) => theme.color.primaryColor};
@@ -67,6 +82,27 @@ export const Button = styled.button`
 
     ${({ remove }) => remove && css`
         background-color: ${({ theme }) => theme.color.removeButton};
+
+        &:hover {
+            filter: brightness(130%);
+            transition: 1s; 
+        }
+
+        &:active {
+            filter: brightness(140%);
+        }
+    `}
+
+    ${({ edit }) => edit && css`
+        background-color: ${({ theme }) => theme.color.saveButton};
+        
+    `}
+
+    ${({ save }) => save && css`
+        background-color: ${({ theme }) => theme.color.saveButton};
+        text-transform: uppercase;
+        font-size: unset;
+        padding: 0px 5px;
 
         &:hover {
             filter: brightness(130%);
