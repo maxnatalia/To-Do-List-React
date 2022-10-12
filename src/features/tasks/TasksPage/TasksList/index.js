@@ -22,7 +22,7 @@ const TasksList = () => {
 
         setEditableId(undefined);
     };
-    
+
     const onEditButtonClick = (id, content) => {
         setEditableId(id);
         setNewTaskContent(content);
@@ -51,7 +51,7 @@ const TasksList = () => {
                                     autoFocus
                                     value={newTaskContent}
                                     onChange={({ target }) => setNewTaskContent(target.value)} />
-                                <Button edit onClick={() => onEditSave(id, content)}>ok</Button>
+                                <Button title="Zapisz" edit onClick={() => onEditSave(id, content)}>ok</Button>
                             </EditableContent>
                         )
                         : (
@@ -59,11 +59,11 @@ const TasksList = () => {
                                 <Content done={done}>
                                     <StyledLinkTask to={`/zadania/${id}`}>{content}</StyledLinkTask>
                                 </Content>
-                                <Button save onClick={() => onEditButtonClick(id, content)}>🖊</Button>
+                                <Button title="Edytuj" save onClick={() => onEditButtonClick(id, content)}>🖊</Button>
                             </EditableContent>
                         )
                     }
-                    <Button remove onClick={() => dispatch(removeTask(id))}>
+                    <Button title="Usuń" remove onClick={() => dispatch(removeTask(id))}>
                         🗑
                     </Button>
                 </Item>
