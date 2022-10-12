@@ -2,6 +2,7 @@ export const theme = {
     color: {
         primaryColor: "#008080",
         removeButton: "#DC143C",
+        saveButton: "#DBDC5B",
         toggleButton: "#278A5B",
         backgroundBody: "#E3E3E3",
         backgroundColorsMain: "#F7F5FA", 
@@ -18,6 +19,7 @@ export const darkTheme = {
     color: {
         primaryColor: "#BBCC5C",
         removeButton: "#DC143C",
+        saveButton: "#DBDC5B",
         toggleButton: "#278A5B",
         backgroundBody: "#30322A",
         backgroundColorsMain: "#43453B",
