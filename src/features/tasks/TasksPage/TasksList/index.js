@@ -1,15 +1,32 @@
-import { List, Item, Content, Button, StyledLinkTask } from "./styled";
+import { List, Item, Content, Button, StyledLinkTask, EditableContent, ContentInput } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTaskDone, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
+import { toggleTaskDone, removeTask, editTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
 import searchQueryParamName from "./searchQueryParamName";
 import { useQueryParameter } from "./searchParameters";
+import { useState } from "react";
 
 const TasksList = () => {
     const query = useQueryParameter(searchQueryParamName);
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
+    const [editableId, setEditableId] = useState(0);
+    const [newTaskContent, setNewTaskContent] = useState("");
 
     const dispatch = useDispatch();
+
+    const onEditSave = (id, content) => {
+        dispatch(editTask({
+            content: newTaskContent.trim() || content,
+            id,
+        }));
+
+        setEditableId(undefined);
+    };
+    
+    const onEditButtonClick = (id, content) => {
+        setEditableId(id);
+        setNewTaskContent(content);
+    };
 
     if (tasks.length <= 0) {
         return (
@@ -19,18 +36,34 @@ const TasksList = () => {
 
     return (
         <List>
-            {tasks.map(task => (
+            {tasks.map(({ id, content, done }) => (
                 <Item
-                    key={task.id}
-                    hidden={task.done && hideDone}
+                    key={id}
+                    hidden={done && hideDone}
                 >
-                    <Button toggleDone onClick={() => dispatch(toggleTaskDone(task.id))}>
-                        {task.done ? "✔" : ""}
+                    <Button toggleDone onClick={() => dispatch(toggleTaskDone(id))}>
+                        {done ? "✔" : ""}
                     </Button>
-                    <Content done={task.done}>
-                        <StyledLinkTask to={`/zadania/${task.id}`}>{task.content}</StyledLinkTask>
-                    </Content>
-                    <Button remove onClick={() => dispatch(removeTask(task.id))}>
+                    {editableId === id
+                        ? (
+                            <EditableContent as="form">
+                                <ContentInput
+                                    autoFocus
+                                    value={newTaskContent}
+                                    onChange={({ target }) => setNewTaskContent(target.value)} />
+                                <Button edit onClick={() => onEditSave(id, content)}>ok</Button>
+                            </EditableContent>
+                        )
+                        : (
+                            <EditableContent>
+                                <Content done={done}>
+                                    <StyledLinkTask to={`/zadania/${id}`}>{content}</StyledLinkTask>
+                                </Content>
+                                <Button save onClick={() => onEditButtonClick(id, content)}>🖊</Button>
+                            </EditableContent>
+                        )
+                    }
+                    <Button remove onClick={() => dispatch(removeTask(id))}>
                         🗑
                     </Button>
                 </Item>
