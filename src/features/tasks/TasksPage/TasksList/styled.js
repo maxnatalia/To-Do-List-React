@@ -12,7 +12,9 @@ export const List = styled.ul`
 export const Item = styled.li`
     border-bottom: 2px solid ${({ theme }) => theme.color.border};
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto 1fr auto auto;
+    justify-content:center;
+    align-items: center;
     padding: 10px;
     grid-gap: 10px;
 
@@ -61,16 +63,13 @@ export const Button = styled.button`
     border: none;
     width: 30px;
     height: 30px;
-    color: ${({ theme }) => theme.color.text};
+    color: ${({ theme }) => theme.color.textButton};
     font-weight: 700;
     font-size: 15px;
     cursor: pointer;
     transition: 1s;
 
-    ${({ toggleDone }) => toggleDone && css`
-        background-color: ${({ theme }) => theme.color.toggleButton};
-
-        &:hover {
+    &:hover {
             filter: brightness(130%);
             transition: 1s; 
         }
@@ -78,39 +77,26 @@ export const Button = styled.button`
         &:active {
             filter: brightness(140%);
         }
+
+    ${({ toggleDone }) => toggleDone && css`
+        background-color: ${({ theme }) => theme.color.toggleButton};
+        color: ${({ theme }) => theme.color.textToggleButton};
     `}
 
     ${({ remove }) => remove && css`
         background-color: ${({ theme }) => theme.color.removeButton};
-
-        &:hover {
-            filter: brightness(130%);
-            transition: 1s; 
-        }
-
-        &:active {
-            filter: brightness(140%);
-        }
     `}
 
     ${({ edit }) => edit && css`
         background-color: ${({ theme }) => theme.color.saveButton};
-        
     `}
 
     ${({ save }) => save && css`
         background-color: ${({ theme }) => theme.color.saveButton};
-        text-transform: uppercase;
-        font-size: unset;
         padding: 0px 5px;
-
-        &:hover {
-            filter: brightness(130%);
-            transition: 1s; 
-        }
-
-        &:active {
-            filter: brightness(140%);
-        }
     `}
+`;
+
+export const ExtraContent = styled.p`
+    margin-bottom: 10px;
 `;

@@ -23,6 +23,6 @@ export const Header = styled.header`
 `;
 
 export const Title = styled.h2`
-    font-size: 22px;
+    font-size: 20px;
     padding: 10px;
 `;
