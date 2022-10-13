@@ -1,9 +1,24 @@
-import { List, Item, Content, Button, StyledLinkTask, EditableContent, ContentInput } from "./styled";
+import {
+    List,
+    Item,
+    Content,
+    Button,
+    StyledLinkTask,
+    EditableContent,
+    ContentInput,
+    ExtraContent
+} from "./styled";
+import {
+    toggleTaskDone,
+    removeTask,
+    editTask,
+    selectHideDone,
+    selectTasksByQuery
+} from "../../tasksSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTaskDone, removeTask, editTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
+import { useState } from "react";
 import searchQueryParamName from "./searchQueryParamName";
 import { useQueryParameter } from "./searchParameters";
-import { useState } from "react";
 
 const TasksList = () => {
     const query = useQueryParameter(searchQueryParamName);
@@ -16,11 +31,11 @@ const TasksList = () => {
 
     const onEditSave = (id, content) => {
         dispatch(editTask({
-            content: newTaskContent.trim() || content,
+            content: newTaskContent.trim(),
             id,
         }));
 
-        setEditableId(undefined);
+        setEditableId(content);
     };
 
     const onEditButtonClick = (id, content) => {
@@ -30,10 +45,11 @@ const TasksList = () => {
 
     if (tasks.length <= 0) {
         return (
-            <p>📌Nie masz aktualnie żadnych zadań na liście</p>
+            <ExtraContent>
+                📌Nie masz aktualnie żadnych zadań na liście
+            </ExtraContent>
         );
-    };
-
+    }
     return (
         <List>
             {tasks.map(({ id, content, done }) => (
@@ -51,7 +67,7 @@ const TasksList = () => {
                                     autoFocus
                                     value={newTaskContent}
                                     onChange={({ target }) => setNewTaskContent(target.value)} />
-                                <Button title="Zapisz" edit onClick={() => onEditSave(id, content)}>ok</Button>
+                                <Button title="Zapisz" edit onClick={() => onEditSave(id, content)}>OK</Button>
                             </EditableContent>
                         )
                         : (
@@ -68,9 +84,13 @@ const TasksList = () => {
                     </Button>
                 </Item>
             ))}
+            <ExtraContent>
+                {hideDone && !tasks.done
+                    ? "📌Masz ukryte ukończone zadania - kliknij 'Pokaż ukończone'"
+                    : "🧷Nie masz więcej zadań"}
+            </ExtraContent>
         </List>
-    )
+    );
 };
 
 export default TasksList;
-
