@@ -2,8 +2,6 @@ import { call, put, delay, takeLatest, takeEvery, select } from "redux-saga/effe
 import { getExampleTasks } from "./getExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 import { fetchExampleTasks, fetchExampleTasksError, fetchExampleTasksSuccess, selectTasks } from "./tasksSlice";
-import { selectDarkTheme } from "../../common/themeSlice";
-import { saveThemeInLocalStorage } from "../../common/themeInLocalStorage";
 
 export function* fetchExampleTasksHandler() {
     try {
@@ -21,13 +19,7 @@ function* saveTasksInLocalStorageHandler() {
     yield call(saveTasksInLocalStorage, tasks);
 }
 
-function* saveThemeInLocalStorageHandler() {
-    const darkTheme = yield select(selectDarkTheme);
-    yield call(saveThemeInLocalStorage, darkTheme);
-}
-
 export function* tasksSaga() {
     yield takeLatest(fetchExampleTasks.type, fetchExampleTasksHandler)
     yield takeEvery("*", saveTasksInLocalStorageHandler)
-    yield takeEvery("*", saveThemeInLocalStorageHandler)
 }
