@@ -30,9 +30,10 @@ Another improvement in this project is <mark>changing theme</mark> - what is als
 ## 👁‍🗨Demo:
 [Add new task](https://maxnatalia.github.io/ToDoListReact/)
 ## 👁‍🗨Web preview Light Theme:
-![web-preview-todo.jpg](https://i.postimg.cc/Y9vmLFsv/web-preview-todo.jpg)
+![2.jpg](https://i.postimg.cc/m2DbLyQr/2.jpg)
 
 ## 👁‍🗨Web preview Dark Theme:
+![1.jpg](https://i.postimg.cc/sf5WPy8W/1.jpg)
 ## 🛠Technologies:
 
 - [x] HTML
