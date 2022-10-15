@@ -5,10 +5,11 @@ This project was bootstrapped with Create React App.
 # 📑 Table of contents:
 
 1. [📌Description](#description)
-2. [👁‍🗨Demo](#demo)
-3. [👁‍🗨Web preview](#web-preview)
-4. [🛠Technologies](#technologies)
-5. [📌Available Scripts](#available-scripts)
+1. [👁‍🗨Demo](#demo)
+1. [👁‍🗨Web preview Light Theme](#web-preview-light-theme)
+1. [👁‍🗨Web preview Dark Theme](#web-preview-dark-theme)
+1. [🛠Technologies](#technologies)
+1. [📌Available Scripts](#available-scripts)
 
 ## 📌Description:
 
