@@ -21,12 +21,15 @@ This project contains:
 
 The project has been upgraded with new interesting features.
 
-Now you can also <mark>hiding</mark> completed tasks, quickly <mark>unchecking</mark> all already completed tasks and <mark>removed</mark> all tasks. In addition, the application saves your tasks on the <mark>local storage</mark>.
+Now you can also <mark>hiding</mark> completed tasks, quickly <mark>unchecking</mark> all already completed tasks and <mark>removed</mark> all tasks. In addition, the application saves your tasks in <mark>local storage</mark>.
 
 You can also see <mark>single task view</mark>:
 
+![5.jpg](https://i.postimg.cc/SKWYQWwJ/5.jpg)
 
 Another improvement in this project is <mark>changing theme</mark> - what is also saved in <mark>local storage</mark>. 
+
+You can also <mark>download example tasks</mark> - (handled with redux-saga).
 
 ## 👁‍🗨Demo:
 [Add new task](https://maxnatalia.github.io/ToDoListReact/)
