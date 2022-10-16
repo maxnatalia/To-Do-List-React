@@ -1,5 +1,5 @@
 # 📂 To Do List - Lista zadań
-This is a <mark>To Do List</mark> project.
+This is a *To Do List* project.
 
 This project was bootstrapped with Create React App.
 # 📑 Table of contents:
@@ -21,17 +21,17 @@ This project was bootstrapped with Create React App.
 
 - The project has been upgraded with new interesting features.
 
-- Now you can also <mark>hiding</mark> completed tasks, quickly <mark>unchecking</mark> all already completed tasks and <mark>removed</mark> all tasks. In addition, the application saves your tasks in <mark>local storage</mark>.
+- Now you can also **hiding** completed tasks, quickly **unchecking** all already completed tasks and **removed** all tasks. In addition, the application saves your tasks in **local storage**.
 
-- You can also see <mark>single task view</mark>:
+- You can also see **single task view**:
 
 ![5.jpg](https://i.postimg.cc/SKWYQWwJ/5.jpg)
 
-- Another improvement in this project is <mark>changing theme</mark> - what is also saved in <mark>local storage</mark>
+- Another improvement in this project is **changing theme**- what is also saved in **local storage**.
 
-- You can also <mark>download example tasks</mark> - (handled with redux-saga)
+- You can also **download example tasks** - (handled with redux-saga).
 
-- Now, you can search your task using a <mark>search engine</mark>
+- Now, you can search your task using a **search engine**.
 ![6.jpg](https://i.postimg.cc/C5Gg6pxK/6.jpg)
 
 ## 👁‍🗨Demo:
