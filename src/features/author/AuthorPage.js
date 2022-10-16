@@ -13,8 +13,8 @@ const AuthorPage = () => {
                     title="Natalia Mazur-Żurek"
                     body=
                     {<>
-                        <p> Cześć! Nazywam się <strong>Natalia</strong> i mieszkam od niedawna w Dąbrowie Górniczej
-                            z mężem, psem i trzema papugami🐶🦜🐦🐦.
+                        <p> Cześć! Nazywam się <strong>Natalia</strong> i jestem miłośniczką zwierząt.
+                            Sama posiadam psa i trzy papugi🐶🦜🐦🐦.
                         </p>
                         <p>
                             Ukończyłam studia - iberystykę, a dokładniej <strong>język hiszpański</strong> w biznesie i turystyce.
