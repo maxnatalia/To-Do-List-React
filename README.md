@@ -13,23 +13,26 @@ This project was bootstrapped with Create React App.
 
 ## 📌Description:
 
-This project contains:
-- adding a new task, 
-- ticking a task as done✅
-- editing a task
-- removing a task.
+- This project contains:
+    - adding a new task, 
+    - ticking a task as done✅
+    - editing a task
+    - removing a task.
 
-The project has been upgraded with new interesting features.
+- The project has been upgraded with new interesting features.
 
-Now you can also <mark>hiding</mark> completed tasks, quickly <mark>unchecking</mark> all already completed tasks and <mark>removed</mark> all tasks. In addition, the application saves your tasks in <mark>local storage</mark>.
+- Now you can also <mark>hiding</mark> completed tasks, quickly <mark>unchecking</mark> all already completed tasks and <mark>removed</mark> all tasks. In addition, the application saves your tasks in <mark>local storage</mark>.
 
-You can also see <mark>single task view</mark>:
+- You can also see <mark>single task view</mark>:
 
 ![5.jpg](https://i.postimg.cc/SKWYQWwJ/5.jpg)
 
-Another improvement in this project is <mark>changing theme</mark> - what is also saved in <mark>local storage</mark>. 
+- Another improvement in this project is <mark>changing theme</mark> - what is also saved in <mark>local storage</mark>
 
-You can also <mark>download example tasks</mark> - (handled with redux-saga).
+- You can also <mark>download example tasks</mark> - (handled with redux-saga)
+
+- Now, you can search your task using a <mark>search engine</mark>
+![6.jpg](https://i.postimg.cc/C5Gg6pxK/6.jpg)
 
 ## 👁‍🗨Demo:
 [Add new task](https://maxnatalia.github.io/ToDoListReact/)
