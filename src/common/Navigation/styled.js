@@ -10,7 +10,7 @@ export const StyledNavLink = styled(NavLink)`
         font-weight: 700;
     }
 
-    &:active {
+    &.active {
         font-weight: 700;
         color: ${({ theme }) => theme.color.backgroundColorsMain};
         text-decoration: none;
