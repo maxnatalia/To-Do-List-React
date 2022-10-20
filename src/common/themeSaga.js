@@ -7,6 +7,6 @@ function* saveThemeInLocalStorageHandler() {
     yield call(saveThemeInLocalStorage, darkTheme);
 }
 
-export default function* tasksSaga() {
-    yield takeEvery("*", saveThemeInLocalStorageHandler)
+export default function* themeSaga() {
+    yield takeEvery("*", saveThemeInLocalStorageHandler);
 }
