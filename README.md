@@ -35,7 +35,7 @@ This project was bootstrapped with Create React App.
 ![6.jpg](https://i.postimg.cc/C5Gg6pxK/6.jpg)
 
 ## 👁‍🗨Demo:
-[Add new task](https://maxnatalia.github.io/To-Do-List-React/)
+[Add new task](https://maxnatalia.github.io/ToDoListReact/)
 ## 👁‍🗨Web preview Light Theme:
 ![2.jpg](https://i.postimg.cc/m2DbLyQr/2.jpg)
 
