@@ -10,12 +10,12 @@ import {
 } from "./styled";
 import {
     toggleTaskDone,
-    removeTask,
     editTask,
     selectHideDone,
-    selectTasksByQuery
+    selectTasksByQuery,
+    removeTask,
 } from "../../tasksSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { useState } from "react";
 import searchQueryParamName from "./searchQueryParamName";
 import { useQueryParameter } from "./searchParameters";
@@ -34,7 +34,6 @@ const TasksList = () => {
             content: newTaskContent.trim(),
             id,
         }));
-
         setEditableId(content);
     };
 
@@ -79,7 +78,12 @@ const TasksList = () => {
                             </EditableContent>
                         )
                     }
-                    <Button title="Usuń" remove onClick={() => dispatch(removeTask(id))}>
+                    <Button
+                        title="Usuń"
+                        remove
+                        onClick={() => {
+                            dispatch(removeTask(id));
+                        }}>
                         🗑
                     </Button>
                 </Item>

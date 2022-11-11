@@ -6,14 +6,19 @@ import Header from "../../../common/Header";
 import { Main } from "../../../common/Main";
 import ExtraButton from "./ExtraButton";
 import Search from "./Search";
-import Nav from "../../../common/Navigation"
+import Nav from "../../../common/Navigation";
+import { useSelector } from "react-redux";
+import { selectIsOpen } from "./Modal/modalSlice";
+import Modal from "./Modal/index";
 
 function TasksPage() {
+    const isOpen = useSelector(selectIsOpen);
 
     return (
         <>
             <Nav />
             <Main>
+                {isOpen && <Modal />}
                 <Header title="Lista zadań" />
                 <Section
                     title="Dodaj nowe zadanie"

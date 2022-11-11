@@ -1,6 +1,7 @@
 import { Button, Container } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleHideDone, setAllDone, removeAllTasks, selectHideDone, selectIsEveryTaskDone, selectAreTasksEmpty } from "../../tasksSlice";
+import { toggleHideDone, setAllDone, selectHideDone, selectIsEveryTaskDone, selectAreTasksEmpty } from "../../tasksSlice";
+import { openModal } from "../Modal/modalSlice";
 
 const Buttons = () => {
     const hideDone = useSelector(selectHideDone);
@@ -8,6 +9,7 @@ const Buttons = () => {
     const areTasksEmpty = useSelector(selectAreTasksEmpty);
 
     const dispatch = useDispatch();
+    
     return (
         <Container>
             { areTasksEmpty && (
@@ -22,7 +24,7 @@ const Buttons = () => {
                         Ukończ wszystkie
                     </Button>
                     <Button
-                        onClick={() => dispatch(removeAllTasks())}
+                        onClick={() => dispatch(openModal())}
                     >
                         Usuń wszystkie
                     </Button>
