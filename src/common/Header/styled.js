@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 50px;
 
     @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px ) {
         display: grid;
