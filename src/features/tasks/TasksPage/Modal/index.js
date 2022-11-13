@@ -1,5 +1,5 @@
 import { closeModal } from "./modalSlice";
-import { Container, Title, ButtonWrapper, Button, ModalWrapper } from "./styled";
+import { Container, Title, ButtonWrapper, Button, ModalWrapper, ClosedIcon, ClosedIconWrapper } from "./styled";
 import { useDispatch } from "react-redux";
 import { removeAllTasks } from "../../tasksSlice";
 
@@ -8,6 +8,9 @@ const Modal = () => {
     return (
         <Container>
             <ModalWrapper>
+                <ClosedIconWrapper>
+                    <ClosedIcon onClick={() => dispatch(closeModal())}>✖</ClosedIcon>
+                </ClosedIconWrapper>
                 <Title>Czy na pewno chcesz usunąć wszystkie zadania?</Title>
                 <ButtonWrapper>
                     <Button
