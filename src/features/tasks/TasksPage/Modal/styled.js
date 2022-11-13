@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const ModalWrapper = styled.div`
-    height: 400px;
+    height: 300px;
     width: 500px;
     background-color: white;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
@@ -35,6 +35,7 @@ export const ModalWrapper = styled.div`
 export const Title = styled.h2`
     text-align: center;
     color: teal;
+    flex-grow: 1;
 
     @media (max-width: 768px) {
         font-size: 14px;
@@ -68,3 +69,21 @@ export const Button = styled.button`
         width: 75px;
     }
 `;
+
+export const ClosedIconWrapper = styled.div`
+    justify-self: end;
+    align-self: flex-end;
+    flex-grow: 2;
+`;
+
+export const ClosedIcon = styled.span`
+    color: teal;
+    font-size: 30px;
+    justify-self: flex-end;
+    cursor: pointer;
+
+    @media (max-width: 767px) {
+        font-size: 20px;
+    }
+`;
+
