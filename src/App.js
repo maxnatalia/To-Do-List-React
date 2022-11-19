@@ -8,6 +8,7 @@ import { selectDarkTheme } from "./common/themeSlice";
 import { ThemeProvider } from "styled-components";
 import { theme, darkTheme } from "../src/theme";
 import { GlobalStyle } from "./GlobalStyle";
+import InfoAppPage from "./features/infoApp/InfoAppPage";
 
 const App = () => {
     const isDarkTheme = useSelector(selectDarkTheme);
@@ -26,6 +27,9 @@ const App = () => {
                     </Route>
                     <Route path="/autor">
                         <AuthorPage />
+                    </Route>
+                    <Route path="/info">
+                        <InfoAppPage />
                     </Route>
                     <Route path="/">
                         <Page404 />
