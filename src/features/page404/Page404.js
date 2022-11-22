@@ -3,15 +3,20 @@ import { Main } from "../../common/Main";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 import { StyledLinkTask } from "../tasks/TasksPage/TasksList/styled";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "../../common/languageSlice";
+import descriptions from "../../common/descriptions";
 
 const Page404 = () => {
+    const language = useSelector(selectLanguage);
+
     return (
         <><Nav />
             <Main>
-                <Header title="Błąd 404 - nie znaleziono strony" />
+                <Header title={descriptions[language].errorPage} />
                 <Section
-                    title="Strona o podanym adresie nie istnieje😒"
-                    body={<StyledLinkTask to="/zadania">Powrót do Strony Głównej</StyledLinkTask>}
+                    title={descriptions[language].errorPageContent}
+                    body={<StyledLinkTask to="/zadania">{descriptions[language].pageLink}</StyledLinkTask>}
                 />
             </Main>
         </>
