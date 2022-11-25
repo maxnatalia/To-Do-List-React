@@ -13,8 +13,8 @@ const Footer = () => {
                     nataliamazur1988@gmail.com
                 </LinkEmail>
                 <WrapperIcon>
-                    <IconLink target="_blank" href="" title="Github"><GithubIcon /></IconLink>
-                    <IconLink target="_blank" href="" title="LinkedIn"><LinkedInIcon /></IconLink>
+                    <IconLink target="_blank" href="https://github.com/maxnatalia" title="Github"><GithubIcon /></IconLink>
+                    <IconLink target="_blank" href="https://www.linkedin.com/in/natalia-mazur-%C5%BCurek-136a35254/" title="LinkedIn"><LinkedInIcon /></IconLink>
                 </WrapperIcon>
             </ContainerAddress>
             <ContainerAbout>
