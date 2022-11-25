@@ -7,8 +7,8 @@ export const StyledFooter = styled.footer`
 
 export const ContainerAbout = styled.div`
     text-align: center;
-    color: white;
-    background-color: teal;
+    color: ${({ theme }) => theme.color.backgroundColorsMain};
+    background-color: ${({ theme }) => theme.color.primaryColor};
     padding: 20px 0;
 `;
 
@@ -26,9 +26,14 @@ export const ContainerAddress = styled.address`
 export const LinkEmail = styled.a`
     text-decoration: none;
     font-size: 30px;
-    font-weight: 600;
-    color: teal;
+    font-weight: 700;
+    color: ${({ theme }) => theme.color.primaryColor};
     padding: 10px;
+
+    &:hover {
+        filter: brightness(120%);
+        transition: 1s; 
+    }
 
     @media (max-width:768px) {
         font-size: 20px;
@@ -49,7 +54,12 @@ export const IconLink = styled.a`
     padding: 10px;
 
     & path {
-        fill: teal;
+        fill: ${({ theme }) => theme.color.primaryColor};
+    }
+
+    &:hover {
+        filter: brightness(120%);
+        transition: 1s; 
     }
 `;
 
