@@ -1,4 +1,4 @@
-import { Wrapper, Button, StyledHeader } from "./styled";
+import { Wrapper, Button, StyledHeader, ButtonWrapper } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
 import { selectDarkTheme, toggleTheme } from "../themeSlice";
 import { changeLanguage, selectLanguage } from "../languageSlice";
@@ -14,17 +14,17 @@ const Header = ({ title }) => {
             <StyledHeader>
                 {title}
             </StyledHeader>
-            <div>
+            <ButtonWrapper>
                 {Object.keys(descriptions).map((key) => (
                     <Button
-                        lang
+                        lang="true"
                         key={key}
                         value={key}
                         onClick={() => dispatch(changeLanguage(key))}
                     >{key}
                     </Button>
                 ))}
-            </div>
+            </ButtonWrapper>
             <Button onClick={() => dispatch(toggleTheme())}>
                 {isDarkTheme ? descriptions[language].themeLight : descriptions[language].themeDark}
             </Button>
