@@ -4,8 +4,8 @@ import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Footer from "../../common/Footer";
 import { toolsData } from "./toolsData";
-import { ContainerTools, ToolWrapper, ToolList, ToolItem, ToolIcon } from "./styled";
-import react from "./react-90.svg";
+import { ContainerTools, ToolWrapper, ToolList, ToolItem } from "./styled";
+
 
 const InfoAppPage = () => {
     // const language = useSelector(selectLanguage);
@@ -26,10 +26,9 @@ const InfoAppPage = () => {
                             </div>
                             <ContainerTools>
                                 {toolsData.map((el, index) => (
-                                    <ToolWrapper>
+                                    <ToolWrapper key={index}>
                                         <ToolList key={index}>
                                             {el.name}
-                                            <ToolIcon src={el.img} alt={el.alt} />
                                             {el.tools.map((tool, index) => (
                                                 <ToolItem key={index}>{tool}</ToolItem>
                                             ))}
@@ -37,7 +36,6 @@ const InfoAppPage = () => {
                                     </ToolWrapper>
                                 ))}
                             </ContainerTools>
-                            <div><img src="https://img.shields.io/badge/styled--components-DB7093?style=flat-square&logo=styled-components&logoColor=white" alt='' /></div>
                         </>
                     } />
 
