@@ -6,6 +6,10 @@ export const ContainerTools = styled.div`
     grid-gap: 40px;
     margin-top: 40px;
     margin-bottom: 40px;
+
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 export const ToolWrapper = styled.div`
@@ -16,12 +20,17 @@ export const ToolWrapper = styled.div`
     background-color: teal;
     color: white;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ToolList = styled.ul`
     list-style: none;
     padding: 0;
     font-weight: 600;
+    font-size: 18px;
 `;
 
 export const ToolItem = styled.li`
@@ -31,4 +40,5 @@ export const ToolItem = styled.li`
 export const ToolIcon = styled.img`
     width: 60px;
     height: auto;
+    flex-grow: 1;
 `;
