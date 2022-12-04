@@ -19,10 +19,11 @@ export const StyledNavLink = styled(NavLink)`
 
 export const Nav = styled.nav`
     background-color: ${({ theme }) => theme.color.primaryColor};
-    display: grid;
-    grid-template-columns: max-content max-content;
+    display: flex;
     justify-content: center;
     width: 100%;
     padding: 10px;
     position: fixed;
+    height: 60px;
+   
 `;
