@@ -36,10 +36,9 @@ export const LinkEmail = styled.a`
     }
 
     @media (max-width:768px) {
-        font-size: 20px;
+        font-size: 18px;
         text-align: center;
     }
-
 `;
 export const WrapperIcon = styled.div`
     display: flex;
