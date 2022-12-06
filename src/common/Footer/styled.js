@@ -18,7 +18,7 @@ export const ContainerAddress = styled.address`
     justify-content: space-between;
     align-content: center;
     
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px ) {
         flex-direction: column;
         justify-content: center;
     }
@@ -35,7 +35,7 @@ export const LinkEmail = styled.a`
         transition: 1s; 
     }
 
-    @media (max-width:768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px ) {
         font-size: 18px;
         text-align: center;
     }
@@ -44,7 +44,7 @@ export const WrapperIcon = styled.div`
     display: flex;
     justify-content: flex-end;
 
-    @media (max-width: 768px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobile}px ) {
         justify-content: center;
     }
 `;
