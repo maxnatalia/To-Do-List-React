@@ -1,6 +1,6 @@
 const descriptions = {
   EN: {
-    headerTitle: "To-do list",
+    headerTitle: "To Do list",
     themeLight: "Light Theme",
     themeDark: "Dark Theme",
     sectionTitle: "Add new task",
@@ -38,7 +38,7 @@ const descriptions = {
     modalClose: "Close",
     titleInfoApp: "About Application",
     sectionTitleInfoApp: "More information about application",
-    contentInfoApp: "First project was simple and includes HTML, CSS and JavaScript.This is more extended version. It contains more advanced techniques learned by months of study and practise. 🚀You can spot the first version in Vanilla JavaScript here👉",
+    contentInfoApp: "First project was simple and includes HTML, CSS and JavaScript. This is more extended version. It contains more advanced techniques learned by months of study and practise. 🚀You can spot the first version in Vanilla JavaScript here 👉 ",
   },
   PL: {
     headerTitle: "Lista zadań",
@@ -79,7 +79,7 @@ const descriptions = {
     modalClose: "Zamknij",
     titleInfoApp: "O aplikacji",
     sectionTitleInfoApp: "Więcej informacji na temat aplikacji",
-    contentInfoApp: "Pierwszy projekt był prosty i zawiera HTML, CSS i JavaScript.To jest wersja bardziej rozbudowana. Zawiera bardziej zaawansowane techniki poznane dzięki miesiącom nauki i praktyki. 🚀Pierwszą wersję w Vanilla JavaScript możesz zobaczyć tutaj👉",
+    contentInfoApp: "Pierwszy projekt był prosty i zawierał HTML, CSS i JavaScript. To jest wersja bardziej rozbudowana. Zawiera bardziej zaawansowane techniki poznane dzięki miesiącom nauki i praktyki. 🚀Pierwszą wersję w Vanilla JavaScript możesz zobaczyć tutaj 👉 ",
   },
   ES: {
     headerTitle: "Lista de tareas",
@@ -120,7 +120,7 @@ const descriptions = {
     modalClose: "Cierra",
     titleInfoApp: "Sobre la aplicación",
     sectionTitleInfoApp: "Más información sobre la aplicación",
-    contentInfoApp: "El primer proyecto era simple e incluye HTML, CSS y JavaScript.Esta es una versión más extendida. Contiene técnicas más avanzadas aprendidas con meses de estudio y práctica. 🚀Puedes ver la primera versión en Vanilla JavaScript aquí👉",
+    contentInfoApp: "El primer proyecto era simple e incluye HTML, CSS y JavaScript. Esta es una versión más extendida. Contiene técnicas más avanzadas aprendidas con meses de estudio y práctica. 🚀Puedes ver la primera versión en Vanilla JavaScript aquí 👉 ",
   }
 };
 
