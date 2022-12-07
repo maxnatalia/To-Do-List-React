@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectDarkTheme, toggleTheme } from "../themeSlice";
 import { changeLanguage, selectLanguage } from "../languageSlice";
 import descriptions from "../descriptions";
+import { useState } from "react";
 
 const Header = ({ title }) => {
     const isDarkTheme = useSelector(selectDarkTheme);
     const language = useSelector(selectLanguage);
     const dispatch = useDispatch();
-    
+
+    const [active, setActive] = useState("PL");
+
     return (
         <Wrapper>
             <StyledHeader>
@@ -20,15 +23,20 @@ const Header = ({ title }) => {
                         lang="true"
                         key={key}
                         value={key}
-                        onClick={() => dispatch(changeLanguage(key))}
-                    >{key}
+                        active={active === key}
+                        onClick={() => {
+                            dispatch(changeLanguage(key));
+                            setActive(key);
+                        }}
+                    >
+                        {key}
                     </Button>
                 ))}
             </ButtonWrapper>
             <Button onClick={() => dispatch(toggleTheme())}>
                 {isDarkTheme ? descriptions[language].themeLight : descriptions[language].themeDark}
             </Button>
-        </Wrapper>
+        </Wrapper >
     )
 };
 
