@@ -29,6 +29,16 @@ export const Button = styled.button`
         font-weight: 600;
     }
 
+    ${({ active }) => active && css`
+        opacity: 0.5;
+        cursor: default;
+        z-index: -40;
+
+        &:hover {
+            font-weight: 400;
+        }
+    `}
+    
     ${({ lang }) => lang && css`
         width: 60px;
 
