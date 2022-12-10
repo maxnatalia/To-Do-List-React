@@ -5,4 +5,5 @@ export default styled.input`
     border: 2px solid ${({ theme }) => theme.color.border};
     background-color: ${({ theme }) => theme.color.backgroundBody};
     border-radius: 5px;
+    color: ${({ theme }) => theme.color.primaryColor};
 `;
