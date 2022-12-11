@@ -1,12 +1,15 @@
 import React, { useState, useRef } from "react";
 import { FormContainer, Button } from "./styled";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import Input from "../../Input";
+import { selectLanguage } from "../../../../common/languageSlice";
+import descriptions from "../../../../common/descriptions";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const language = useSelector(selectLanguage);
 
     const inputRef = useRef(null);
     const focusInput = () => {
@@ -42,8 +45,8 @@ const Form = () => {
                 required
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 name="input"
-                placeholder="Co jest do zrobienia?" />
-            <Button>Dodaj zadanie</Button>
+                placeholder={descriptions[language].inputPlaceholder} />
+            <Button>{descriptions[language].formButtonInnerText}</Button>
         </FormContainer>
     );
 };
