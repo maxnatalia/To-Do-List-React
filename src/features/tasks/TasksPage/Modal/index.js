@@ -1,30 +1,30 @@
 import { closeModal } from "./modalSlice";
-import { Container, Title, ButtonWrapper, Button, ModalWrapper, ClosedIcon, ClosedIconWrapper } from "./styled";
+import { Container, Title, ButtonWrapper, ModalWrapper, ClosedIcon, ClosedIconWrapper, ConfirmButton } from "./styled";
 import { useDispatch } from "react-redux";
-import { removeAllTasks } from "../../tasksSlice";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "../../../../common/languageSlice";
+import descriptions from "../../../../common/descriptions";
 
-const Modal = () => {
+const Modal = ({ titleModal, modalClick }) => {
+    const language = useSelector(selectLanguage);
     const dispatch = useDispatch();
+
     return (
         <Container>
             <ModalWrapper>
                 <ClosedIconWrapper>
-                    <ClosedIcon onClick={() => dispatch(closeModal())}>✖</ClosedIcon>
+                    <ClosedIcon
+                        onClick={() => dispatch(closeModal())}
+                        title={descriptions[language].modalClose}
+                    />
                 </ClosedIconWrapper>
-                <Title>Czy na pewno chcesz usunąć wszystkie zadania?</Title>
+                <Title>{titleModal}</Title>
                 <ButtonWrapper>
-                    <Button
-                        onClick={() => {
-                            dispatch(removeAllTasks());
-                            dispatch(closeModal());
-                        }}
-                    >
-                        TAK
-                    </Button>
-                    <Button
+                    {modalClick}
+                    <ConfirmButton
                         onClick={() => {
                             dispatch(closeModal());
-                        }}>NIE</Button>
+                        }}>{descriptions[language].modalRejected}</ConfirmButton>
                 </ButtonWrapper>
             </ModalWrapper>
         </Container>
