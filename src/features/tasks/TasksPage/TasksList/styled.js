@@ -7,6 +7,10 @@ export const List = styled.ul`
     padding: 40px;
     margin: 0;
     background-color: ${({ theme }) => theme.color.backgroundColorsMain};
+
+    @media (max-width: 767px) {
+        padding: 0;
+    }
 `;
 
 export const Item = styled.li`
