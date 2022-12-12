@@ -2,8 +2,12 @@ import Input from "../../Input";
 import { Wrapper } from "./styled";
 import searchQueryParamName from "../TasksList/searchQueryParamName";
 import { useQueryParameter, useReplaceQueryParameter } from "../TasksList/searchParameters";
+import { useSelector } from "react-redux";
+import { selectLanguage } from "../../../../common/languageSlice";
+import descriptions from "../../../../common/descriptions";
 
 const Search = () => {
+    const language = useSelector(selectLanguage);
     const query = useQueryParameter(searchQueryParamName);
     const replaceQueryParameter = useReplaceQueryParameter();
 
@@ -17,7 +21,7 @@ const Search = () => {
     return (
         <Wrapper>
             <Input
-                placeholder="Filtruj zadania"
+                placeholder={descriptions[language].searchLabelPlaceholder}
                 value={query || ""}
                 onChange={onInputChange}
             />
