@@ -1,46 +1,52 @@
 # 📂 To Do List - Lista zadań
-This is a *To Do List* project.
+This is a **multi-lingual** *To Do List* project.
+
+You can choose one of **three availables languages**: EN, PL, ES.
 
 This project was bootstrapped with Create React App.
 # 📑 Table of contents:
 
-1. [📌Description](#description)
 1. [👁‍🗨Demo](#demo)
+1. [📌Description](#description)
 1. [👁‍🗨Web preview Light Theme](#web-preview-light-theme)
 1. [👁‍🗨Web preview Dark Theme](#web-preview-dark-theme)
 1. [🛠Technologies](#technologies)
 1. [📌Available Scripts](#available-scripts)
-
+## 👁‍🗨Demo:
+[Add new task](https://maxnatalia.github.io/ToDoListReact/)
 ## 📌Description:
 
 - This project contains:
-    - adding a new task, 
+    - adding a new task
     - ticking a task as done✅
     - editing a task
-    - removing a task.
+    - removing a task
+
 
 - The project has been upgraded with new interesting features.
 
-- Now you can also **hiding** completed tasks, quickly **unchecking** all already completed tasks and **removed** all tasks. In addition, the application saves your tasks in **local storage**.
+- Now you can also **hiding** completed tasks, quickly **unchecking** all already completed tasks and **removed** all tasks. Here you can see used **Modal** with two different versions for single task and all tasks. In addition, the application saves your tasks in **local storage**.
+
+![modal.jpg](modal.jpg)
+
+![singleModal.jpg](singleModal.jpg)
+
 
 - You can also see **single task view**:
 
-![5.jpg](https://i.postimg.cc/SKWYQWwJ/5.jpg)
+![taskDetails.jpg](taskDetails.JPG)
 
-- Another improvement in this project is **changing theme**- what is also saved in **local storage**.
+- Another improvement in this project is **changing theme**- what is also saved in **local storage** like changing languages.
 
 - You can also **download example tasks** - (handled with redux-saga).
 
 - Now, you can search your task using a **search engine**.
-![6.jpg](https://i.postimg.cc/C5Gg6pxK/6.jpg)
-
-## 👁‍🗨Demo:
-[Add new task](https://maxnatalia.github.io/ToDoListReact/)
+![searcher.jpg](searcher.jpg)
 ## 👁‍🗨Web preview Light Theme:
-![2.jpg](https://i.postimg.cc/m2DbLyQr/2.jpg)
+![lightPreview.jpg](lightPreview.jpg)
 
 ## 👁‍🗨Web preview Dark Theme:
-![1.jpg](https://i.postimg.cc/sf5WPy8W/1.jpg)
+![darkPreview.jpg](darkPreview.jpg)
 ## 🛠Technologies:
 
 - [x] HTML
@@ -55,7 +61,6 @@ This project was bootstrapped with Create React App.
 - [x] React-Redux
 - [x] Redux-Saga
 - [x] Redux-Toolkit
--
 ## 📌Available Scripts
 
 In the project directory, you can run:
