@@ -101,7 +101,7 @@ const TasksList = () => {
                     }
                     {isOpen &&
                         <Modal
-                            titleModal={`Czy jesteś pewien, że chcesz usunąć zadanie: ${deletedContent}`}
+                            titleModal={`${descriptions[language].modalContent} ${deletedContent}`}
                             modalClick={
                                 <ConfirmButton
                                     onClick={() => {
