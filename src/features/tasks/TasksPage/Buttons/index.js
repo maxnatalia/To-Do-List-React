@@ -34,7 +34,7 @@ const Buttons = () => {
                         {descriptions[language].removeAllInnerText}
                     </Button>
                     {isOpenAll && <Modal
-                        titleModal={descriptions[language].modalContent}
+                        titleModal={descriptions[language].modalContentAll}
                         modalClick={
                             <ConfirmButton onClick={() => {
                                 dispatch(removeAllTasks())
