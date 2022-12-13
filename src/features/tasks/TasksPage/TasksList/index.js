@@ -33,6 +33,8 @@ const TasksList = () => {
     const [editableId, setEditableId] = useState(0);
     const [newTaskContent, setNewTaskContent] = useState("");
     const isOpen = useSelector(selectIsOpen);
+    const [deletedId, setDeletedId] = useState("");
+    const [deletedContent, setDeletedContent] = useState("");
 
     const dispatch = useDispatch();
 
@@ -97,24 +99,28 @@ const TasksList = () => {
                             </EditableContent>
                         )
                     }
-                    <Button
-                        title={descriptions[language].remove}
-                        remove
-                        onClick={() => dispatch(openModal(id))}
-                    >
-                        🗑
-                    </Button>
                     {isOpen &&
                         <Modal
-                            titleModal={`Czy jesteś pewien, że chcesz usunąć zadanie: ${content}`}
+                            titleModal={`Czy jesteś pewien, że chcesz usunąć zadanie: ${deletedContent}`}
                             modalClick={
                                 <ConfirmButton
                                     onClick={() => {
-                                        dispatch(removeTask(id));
+                                        dispatch(removeTask(deletedId));
                                         dispatch(closeModal());
                                     }}
                                 >{descriptions[language].modalApproved}
                                 </ConfirmButton>} />}
+                    <Button
+                        title={descriptions[language].remove}
+                        remove
+                        onClick={() => {
+                            setDeletedId(id);
+                            setDeletedContent(content);
+                            dispatch(openModal());
+                        }}
+                    >
+                        🗑
+                    </Button>
                 </Item>
             ))}
             <ExtraContent>
