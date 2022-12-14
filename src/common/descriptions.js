@@ -117,7 +117,7 @@ const descriptions = {
     remove: "Elimina",
     save: "Guarda",
     modalContentAll: "¿Está seguro de que quiere eliminar todas las tareas?",
-    modalContent: "¿Está seguro de que desea eliminar la tarea? ",
+    modalContent: "¿Está seguro de que quiere eliminar la tarea? ",
     modalApproved: "Sí",
     modalRejected: "No",
     modalClose: "Cierra",
