@@ -10,12 +10,7 @@ const Header = ({ title }) => {
     const language = useSelector(selectLanguage);
     const dispatch = useDispatch();
 
-    const [active, setActive] = useState("PL");
-
-    const handleClick = (key) => {
-        dispatch(changeLanguage(key));
-        setActive(key);
-    };
+    const [active, setActive] = useState(language);
 
     return (
         <Wrapper>
@@ -29,7 +24,10 @@ const Header = ({ title }) => {
                         key={key}
                         value={key}
                         active={key === active}
-                        onClick={() => {handleClick(key)}}
+                        onClick={() => {
+                            dispatch(changeLanguage(key));
+                            setActive(key);
+                        }}
                     >
                         {key}
                     </Button>
