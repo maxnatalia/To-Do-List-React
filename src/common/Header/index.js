@@ -12,6 +12,11 @@ const Header = ({ title }) => {
 
     const [active, setActive] = useState("PL");
 
+    const handleClick = (key) => {
+        dispatch(changeLanguage(key));
+        setActive(key);
+    };
+
     return (
         <Wrapper>
             <StyledHeader>
@@ -23,11 +28,8 @@ const Header = ({ title }) => {
                         lang="true"
                         key={key}
                         value={key}
-                        active={active === key}
-                        onClick={() => {
-                            dispatch(changeLanguage(key));
-                            setActive(key);
-                        }}
+                        active={key === active}
+                        onClick={() => {handleClick(key)}}
                     >
                         {key}
                     </Button>
