@@ -5,4 +5,4 @@ export const saveLanguageInLocalStorage = language =>
 
 
 export const getLanguageFromLocalStorage = () => 
-    JSON.parse(localStorage.getItem(localStorageKey)) || false;
+    JSON.parse(localStorage.getItem(localStorageKey)) || "PL";
