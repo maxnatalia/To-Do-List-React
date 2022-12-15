@@ -1,6 +1,6 @@
 import { call, takeEvery, select } from "redux-saga/effects";
-import { selectLanguage } from "../common/languageSlice";
-import { saveLanguageInLocalStorage } from "../common/languageInLocalStorage";
+import { selectLanguage } from "../common/language/languageSlice";
+import { saveLanguageInLocalStorage } from "../common/language/languageInLocalStorage";
 
 function* saveLanguageInLocalStorageHandler() {
     const language = yield select(selectLanguage);
