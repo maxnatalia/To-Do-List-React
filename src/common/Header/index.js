@@ -1,9 +1,9 @@
-import { Wrapper, Button, StyledHeader, ButtonWrapper } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { selectDarkTheme, toggleTheme } from "../themeSlice";
-import { changeLanguage, selectLanguage } from "../languageSlice";
-import descriptions from "../descriptions";
 import { useState } from "react";
+import { Wrapper, Button, StyledHeader, ButtonWrapper } from "./styled";
+import { selectDarkTheme, toggleTheme } from "../theme/themeSlice";
+import { changeLanguage, selectLanguage } from "../language/languageSlice";
+import descriptions from "../language/descriptions";
 
 const Header = ({ title }) => {
     const isDarkTheme = useSelector(selectDarkTheme);

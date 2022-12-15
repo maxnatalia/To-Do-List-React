@@ -4,7 +4,7 @@ import AuthorPage from "./features/author/AuthorPage";
 import TasksPage from "./features/tasks/TasksPage";
 import TaskPage from "./features/tasks/TaskPage";
 import Page404 from "./features/page404/Page404";
-import { selectDarkTheme } from "./common/themeSlice";
+import { selectDarkTheme } from "./common/theme/themeSlice";
 import { ThemeProvider } from "styled-components";
 import { theme, darkTheme } from "../src/theme";
 import { GlobalStyle } from "./GlobalStyle";

@@ -1,11 +1,11 @@
-import { Button, Container } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleHideDone, setAllDone, selectHideDone, selectIsEveryTaskDone, selectAreTasksEmpty, removeAllTasks } from "../../tasksSlice";
-import { openModalAll, selectIsOpenAll, closeModal } from "../Modal/modalSlice";
-import descriptions from "../../../../common/descriptions";
-import { selectLanguage } from "../../../../common/languageSlice";
+import { Button, Container } from "./styled";
 import Modal from "../Modal";
 import { ConfirmButton } from "../Modal/styled";
+import { openModalAll, selectIsOpenAll, closeModal } from "../Modal/modalSlice";
+import { toggleHideDone, setAllDone, selectHideDone, selectIsEveryTaskDone, selectAreTasksEmpty, removeAllTasks } from "../../tasksSlice";
+import descriptions from "../../../../common/language/descriptions";
+import { selectLanguage } from "../../../../common/language/languageSlice";
 
 const Buttons = () => {
     const hideDone = useSelector(selectHideDone);

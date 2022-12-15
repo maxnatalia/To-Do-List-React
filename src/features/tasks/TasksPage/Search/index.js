@@ -1,10 +1,10 @@
+import { useSelector } from "react-redux";
 import Input from "../../Input";
 import { Wrapper } from "./styled";
 import searchQueryParamName from "../TasksList/searchQueryParamName";
 import { useQueryParameter, useReplaceQueryParameter } from "../TasksList/searchParameters";
-import { useSelector } from "react-redux";
-import { selectLanguage } from "../../../../common/languageSlice";
-import descriptions from "../../../../common/descriptions";
+import { selectLanguage } from "../../../../common/language/languageSlice";
+import descriptions from "../../../../common/language/descriptions";
 
 const Search = () => {
     const language = useSelector(selectLanguage);

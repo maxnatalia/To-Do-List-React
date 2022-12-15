@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { selectLanguage } from "../languageSlice";
 import { Nav, StyledNavLink, MenuBars, MenuClose, NavMenu, MobileMenu, Container } from "./styled";
-import descriptions from "../descriptions";
+import { selectLanguage } from "../language/languageSlice";
+import descriptions from "../language/descriptions";
 
 const Navigation = () => {
     const [show, setShow] = useState(false);
@@ -33,7 +33,7 @@ const Navigation = () => {
             </Container>
         </Nav>
     )
-}
+};
 
 export default Navigation;
 

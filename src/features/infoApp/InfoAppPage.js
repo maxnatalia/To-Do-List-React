@@ -1,12 +1,12 @@
+import { useSelector } from "react-redux";
 import Nav from "../../common/Navigation";
 import { Main } from "../../common/Main";
 import Header from "../../common/Header";
 import Section from "../../common/Section";
 import Footer from "../../common/Footer";
-import { useSelector } from "react-redux";
-import { selectLanguage } from "../../common/languageSlice";
-import descriptions from "../../common/descriptions";
 import { StyledLink } from "./styled";
+import { selectLanguage } from "../../common/language/languageSlice";
+import descriptions from "../../common/language/descriptions";
 
 const InfoAppPage = () => {
     const language = useSelector(selectLanguage);

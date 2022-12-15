@@ -1,11 +1,11 @@
-import React, { useState, useRef } from "react";
-import { FormContainer, Button } from "./styled";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask } from "../../tasksSlice";
+import React, { useState, useRef } from "react";
 import { nanoid } from "@reduxjs/toolkit";
+import { FormContainer, Button } from "./styled";
+import { addTask } from "../../tasksSlice";
 import Input from "../../Input";
-import { selectLanguage } from "../../../../common/languageSlice";
-import descriptions from "../../../../common/descriptions";
+import { selectLanguage } from "../../../../common/language/languageSlice";
+import descriptions from "../../../../common/language/descriptions";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");

@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from "react-redux";
+import { useState } from "react";
 import {
     List,
     Item,
@@ -15,12 +17,10 @@ import {
     selectTasksByQuery,
     removeTask
 } from "../../tasksSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
 import searchQueryParamName from "./searchQueryParamName";
 import { useQueryParameter } from "./searchParameters";
-import { selectLanguage } from "../../../../common/languageSlice";
-import descriptions from "../../../../common/descriptions";
+import { selectLanguage } from "../../../../common/language/languageSlice";
+import descriptions from "../../../../common/language/descriptions";
 import { openModal, closeModal, selectIsOpen } from "../Modal/modalSlice";
 import Modal from "../Modal";
 import { ConfirmButton } from "../Modal/styled";
@@ -133,4 +133,3 @@ const TasksList = () => {
 };
 
 export default TasksList;
-

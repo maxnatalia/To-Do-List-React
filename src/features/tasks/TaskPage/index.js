@@ -1,14 +1,14 @@
-import Section from "../../../common/Section";
-import Header from "../../../common/Header";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { getTaskById } from "../tasksSlice";
+import Footer from "../../../common/Footer";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
 import Nav from "../../../common/Navigation";
 import { Main } from "../../../common/Main";
 import { StyledLinkTask } from "../TasksPage/TasksList/styled";
-import { selectLanguage } from "../../../common/languageSlice";
-import descriptions from "../../../common/descriptions";
-import Footer from "../../../common/Footer";
+import { getTaskById } from "../tasksSlice";
+import { selectLanguage } from "../../../common/language/languageSlice";
+import descriptions from "../../../common/language/descriptions";
 
 const TaskPage = () => {
     const language = useSelector(selectLanguage);

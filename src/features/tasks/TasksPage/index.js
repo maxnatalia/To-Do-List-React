@@ -1,17 +1,17 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import Form from "./Form";
 import TasksList from "./TasksList";
 import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import { Main } from "../../../common/Main";
+import Footer from "../../../common/Footer";
+import Nav from "../../../common/Navigation";
 import ExtraButton from "../ExtraButton";
 import Search from "./Search";
-import Nav from "../../../common/Navigation";
-import { useSelector } from "react-redux";
-import { selectLanguage } from "../../../common/languageSlice";
-import descriptions from "../../../common/descriptions";
-import Footer from "../../../common/Footer";
-import { useEffect } from "react";
+import { selectLanguage } from "../../../common/language/languageSlice";
+import descriptions from "../../../common/language/descriptions";
 
 function TasksPage() {
 

@@ -1,9 +1,8 @@
-import { closeModal } from "./modalSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { Container, Title, ButtonWrapper, ModalWrapper, ClosedIcon, ClosedIconWrapper, ConfirmButton } from "./styled";
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { selectLanguage } from "../../../../common/languageSlice";
-import descriptions from "../../../../common/descriptions";
+import { closeModal } from "./modalSlice";
+import { selectLanguage } from "../../../../common/language/languageSlice";
+import descriptions from "../../../../common/language/descriptions";
 
 const Modal = ({ titleModal, modalClick }) => {
     const language = useSelector(selectLanguage);
